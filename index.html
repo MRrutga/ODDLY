@@ -1,21 +1,100 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ODDLY</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ODDLY — Discover Something Unexpected</title>
+
     <link rel="stylesheet" href="style.css">
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="029b76a0-ac97-45b1-a9b0-405d531f1a83" data-domains="mrrutga.github.io"></script>
 </head>
+
 <body>
-    <h1>ODDLY</h1>
-    <p>Discover what you never knew.</p>
 
-    
-<button id="discoverButton">Discover something strange ✨</button>
-<p id="fact"></p>
-<div id="pictures"></div>
+    <!-- ODDLY UPDATE LOG -->
+    <section id="update-log">
 
-   <script src="facts.js"></script>
-<script src="script.js"></script>
+        <p class="update-label">THE FUTURE OF ODDLY</p>
+
+        <h2>What's Coming Next?</h2>
+
+        <p class="update-intro">
+            The discovery never ends. Here's what's coming to ODDLY.
+        </p>
+
+        <div class="update-card">
+            <span class="update-version">UPDATE 26.2</span>
+
+            <h3>Better Images</h3>
+
+            <p>
+                Discover amazing facts with better-matching images
+                that bring every discovery to life.
+            </p>
+
+            <span class="update-status">IN DEVELOPMENT</span>
+        </div>
+
+        <div class="update-card">
+            <span class="update-version">UPCOMING</span>
+
+            <h3>More Mind-Blowing Facts</h3>
+
+            <p>
+                More carefully selected WOW facts from science,
+                nature, history, technology, space and beyond.
+            </p>
+
+            <span class="update-status">PLANNED</span>
+        </div>
+
+        <div class="update-card">
+            <span class="update-version">UPCOMING</span>
+
+            <h3>The ODDLY Experience</h3>
+
+            <p>
+                New improvements to make discovering unexpected
+                things even more exciting.
+            </p>
+
+            <span class="update-status">PLANNED</span>
+        </div>
+
+    </section>
+    <!-- END ODDLY UPDATE LOG -->
+
+
+    <!-- MAIN ODDLY WEBSITE -->
+    <main id="main-content">
+
+        <header>
+            <h1>ODDLY</h1>
+
+            <p>
+                i did know
+            </p>
+        </header>
+
+        <button id="discoverButton" type="button">
+            DISCOVER
+        </button>
+
+        <!-- Facts appear here -->
+        <section id="fact" aria-live="polite"></section>
+
+        <!-- Images appear here -->
+        <section id="pictures" aria-label="Fact images"></section>
+
+    </main>
+
+
+    <!-- LOAD FACTS BEFORE THE SCRIPT -->
+    <script src="facts.js"></script>
+    <script src="script.js"></script>
+
 </body>
 </html>
 
