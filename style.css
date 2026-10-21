@@ -1,208 +1,198 @@
 
-/* ===== ODDLY BASE ===== */
+/* ===== ODDLY — Main design ===== */
 
-body {
-    background-color: #0b1020;
-    color: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 30px;
+* {
+    box-sizing: border-box;
 }
 
-/* ===== MAIN TITLE ===== */
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 40px 24px;
+    background: #0b1020;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
 
+/* ===== Main ODDLY content ===== */
+
+#main-content {
+    width: 100%;
+    max-width: 900px;
+    margin: 80px auto 40px;
+}
+
+header h1,
 h1 {
+    margin: 0;
+    color: #a78bfa;
     font-size: 64px;
     font-weight: 900;
     letter-spacing: 8px;
-    color: #a78bfa;
     text-shadow: 0 0 25px #7c3aed;
 }
 
-/* ===== GENERAL TEXT ===== */
-
-p {
-    font-size: 18px;
+header p {
+    display: inline-block;
+    margin: 12px 0 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #7c3aed;
     color: #94a3b8;
+    font-size: 18px;
     letter-spacing: 2px;
-    line-height: 1.7;
 }
 
-/* ===== DISCOVER BUTTON ===== */
+/* ===== Discover button ===== */
 
 #discoverButton {
-    display: block;
-    margin: 40px auto;
-    padding: 22px 40px;
-    background: linear-gradient(135deg, #a78bfa, #38bdf8);
-    color: #080808;
+    margin: 20px 0;
+    padding: 18px 38px;
+    border: 0;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #a78bfa, #6366f1);
+    color: #080b16;
     font-size: 22px;
     font-weight: 900;
-    border: none;
-    border-radius: 16px;
+    letter-spacing: 2px;
     cursor: pointer;
-    box-shadow: 0 0 25px #7c3aed;
+    box-shadow: 0 0 25px #7c3aed55;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 #discoverButton:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 35px #7c3aed;
+    transform: translateY(-3px);
+    box-shadow: 0 0 35px #7c3aed99;
 }
 
-/* ===== FACT LAYOUT ===== */
+/* ===== Fact display ===== */
 
 #fact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-    margin: 40px auto;
-    max-width: 750px;
+    width: 100%;
+    max-width: 760px;
+    margin: 30px auto;
+    color: #e2e8f0;
+    font-size: 20px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
 }
 
-#fact h2 {
-    color: white;
-    font-size: 30px;
-    margin: 0;
-}
-
-#fact p {
-    margin: 0;
-    line-height: 1.7;
-}
-
-#fact a {
-    display: inline-block;
-    margin-top: 8px;
+#fact h2,
+#fact h3 {
     color: #a78bfa;
 }
-
-/* ===== FACT IMAGES ===== */
 
 #pictures {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
     flex-wrap: wrap;
-    gap: 18px;
-    margin: 30px auto;
-    max-width: 950px;
+    justify-content: center;
+    gap: 16px;
+    max-width: 900px;
+    margin: 24px auto;
 }
 
 #pictures img {
-    width: 280px;
-    max-width: 100%;
-    height: 190px;
+    display: block;
+    width: 100%;
+    max-width: 260px;
+    height: 180px;
     object-fit: cover;
-    border-radius: 16px;
-    box-shadow: 0 0 20px #7c3aed;
+    border: 1px solid #7c3aed66;
+    border-radius: 12px;
 }
 
-/* ===== UPDATE LOG: TOP LEFT ===== */
+/* ===== Small Update Log — top left ===== */
 
 #update-log {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 220px;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 15px;
-    text-align: left;
-    background: #11172a;
-    border: 1px solid #35245e;
-    border-radius: 12px;
+    top: 18px;
+    left: 18px;
     z-index: 10;
+    width: 230px;
+    max-width: calc(100vw - 36px);
+    margin: 0;
+    padding: 14px;
+    border: 1px solid #7c3aed88;
+    border-radius: 10px;
+    background: #11172a;
+    text-align: left;
+    box-shadow: 0 0 18px #7c3aed22;
 }
 
-/* Small heading above the cards */
-
 #update-log .update-label {
+    margin: 0 0 8px;
     color: #a78bfa;
     font-size: 9px;
     font-weight: bold;
-    letter-spacing: 2px;
-    line-height: 1.5;
-    margin: 0 0 8px;
-    padding: 0;
-    border: none;
+    letter-spacing: 1.5px;
 }
 
 #update-log h2 {
-    color: white;
-    font-size: 19px;
+    margin: 0 0 8px;
+    color: #ffffff;
+    font-size: 16px;
     line-height: 1.3;
-    margin: 8px 0;
 }
 
 #update-log .update-intro {
-    color: #94a3b8;
-    font-size: 12px;
-    line-height: 1.5;
-    letter-spacing: 0.5px;
     margin: 0 0 12px;
     padding: 0;
-    border: none;
+    border: 0;
+    color: #94a3b8;
+    font-size: 11px;
+    line-height: 1.5;
+    letter-spacing: 0;
 }
 
-/* Individual update cards */
-
 #update-log .update-card {
-    background: #0b1020;
-    border: 1px solid #35245e;
-    border-radius: 8px;
+    margin-top: 10px;
     padding: 10px;
-    margin: 10px 0;
+    border-top: 1px solid #7c3aed66;
+    background: #0b1020;
     text-align: left;
 }
 
 #update-log .update-version {
+    display: block;
+    margin-bottom: 5px;
     color: #a78bfa;
-    font-size: 10px;
+    font-size: 9px;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
 #update-log .update-card h3 {
-    color: white;
-    font-size: 14px;
+    margin: 4px 0 6px;
+    color: #ffffff;
+    font-size: 12px;
     line-height: 1.4;
-    margin: 8px 0;
 }
 
 #update-log .update-card p {
-    color: #94a3b8;
-    font-size: 12px;
-    line-height: 1.5;
-    letter-spacing: 0.3px;
-    margin: 0;
+    margin: 0 0 8px;
     padding: 0;
-    border: none;
+    border: 0;
+    color: #94a3b8;
+    font-size: 11px;
+    line-height: 1.5;
+    letter-spacing: 0;
+    overflow-wrap: anywhere;
 }
 
 #update-log .update-status {
-    display: inline-block;
-    margin-top: 8px;
+    display: block;
+    margin-top: 6px;
     color: #c4b5fd;
-    border: 1px solid #6d28d9;
-    border-radius: 12px;
-    padding: 4px 8px;
     font-size: 9px;
-    letter-spacing: 0.5px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
 }
 
-/* ===== SMALL SCREENS ===== */
+/* ===== Smaller screens ===== */
 
 @media (max-width: 700px) {
     body {
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 42px;
-        letter-spacing: 5px;
+        padding: 20px 14px;
     }
 
     #update-log {
@@ -210,13 +200,27 @@ p {
         top: auto;
         left: auto;
         width: 100%;
-        max-width: 320px;
+        max-width: 360px;
         margin: 0 auto 35px;
     }
 
-    #pictures img {
-        width: 100%;
-        height: auto;
-        max-height: 250px;
+    #main-content {
+        margin-top: 25px;
+    }
+
+    header h1,
+    h1 {
+        font-size: 46px;
+        letter-spacing: 5px;
+    }
+
+    #discoverButton {
+        max-width: 100%;
+        padding: 16px 24px;
+        font-size: 18px;
+    }
+
+    #fact {
+        font-size: 17px;
     }
 }
