@@ -1,5 +1,5 @@
 
-/* ===== ODDLY — Main design ===== */
+/* ===== ODDLY BASE ===== */
 
 * {
     box-sizing: border-box;
@@ -15,7 +15,7 @@ body {
     text-align: center;
 }
 
-/* ===== Main ODDLY content ===== */
+/* ===== MAIN CONTENT ===== */
 
 #main-content {
     width: 100%;
@@ -23,8 +23,7 @@ body {
     margin: 80px auto 40px;
 }
 
-header h1,
-h1 {
+header h1 {
     margin: 0;
     color: #a78bfa;
     font-size: 64px;
@@ -43,18 +42,28 @@ header p {
     letter-spacing: 2px;
 }
 
-/* ===== Discover button ===== */
+/* ===== DISCOVER BUTTON ===== */
 
 #discoverButton {
-    margin: 20px 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-width: 200px;
+    min-height: 64px;
     padding: 18px 38px;
-    border: 0;
-    border-radius: 10px;
+    margin: 20px auto;
+    border: none;
+    border-radius: 12px;
     background: linear-gradient(135deg, #a78bfa, #6366f1);
     color: #080b16;
+    font-family: Arial, sans-serif;
     font-size: 22px;
     font-weight: 900;
     letter-spacing: 2px;
+    line-height: 1.2;
+    text-align: center;
+    white-space: nowrap;
     cursor: pointer;
     box-shadow: 0 0 25px #7c3aed55;
     transition: transform 0.2s, box-shadow 0.2s;
@@ -65,7 +74,11 @@ header p {
     box-shadow: 0 0 35px #7c3aed99;
 }
 
-/* ===== Fact display ===== */
+#discoverButton:active {
+    transform: translateY(0);
+}
+
+/* ===== FACT ===== */
 
 #fact {
     width: 100%;
@@ -81,6 +94,8 @@ header p {
 #fact h3 {
     color: #a78bfa;
 }
+
+/* ===== PICTURES ===== */
 
 #pictures {
     display: flex;
@@ -101,14 +116,14 @@ header p {
     border-radius: 12px;
 }
 
-/* ===== Small Update Log — top left ===== */
+/* ===== UPDATE LOG ===== */
 
 #update-log {
     position: absolute;
     top: 18px;
     left: 18px;
     z-index: 10;
-    width: 230px;
+    width: 288px;
     max-width: calc(100vw - 36px);
     margin: 0;
     padding: 14px;
@@ -188,7 +203,7 @@ header p {
     letter-spacing: 0.8px;
 }
 
-/* ===== Smaller screens ===== */
+/* ===== MOBILE ===== */
 
 @media (max-width: 700px) {
     body {
@@ -208,15 +223,14 @@ header p {
         margin-top: 25px;
     }
 
-    header h1,
-    h1 {
+    header h1 {
         font-size: 46px;
         letter-spacing: 5px;
     }
 
     #discoverButton {
         max-width: 100%;
-        padding: 16px 24px;
+        padding: 16px 28px;
         font-size: 18px;
     }
 
