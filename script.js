@@ -33,6 +33,7 @@ button.addEventListener("click", async function () {
     const description = document.createElement("p");
     description.textContent = selectedFact.text;
 
+    // Display the original source link.
     const source = document.createElement("a");
     source.href = selectedFact.source;
     source.textContent = "Read the source";
